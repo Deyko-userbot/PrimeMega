@@ -43,8 +43,6 @@ from telegram.error import (
     BadRequest,
     ChatMigrated,
     NetworkError,
-    TelegramError,
-    TimedOut,
     Unauthorized,
 )
 from telegram.ext import (
