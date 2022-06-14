@@ -84,10 +84,10 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-✪ 👋 *ʜᴀʟᴏ* {} !
+ 👋 *ʜᴀʟᴏ* {} !
     ✪ ɴᴀᴍᴀᴋᴜ ᴀᴅᴀʟᴀʜ ꜱᴀɪᴋᴏ ʀᴏʙᴏᴛ [🤖](https://telegra.ph/file/928dafe0e365472cac933.jpg)
     ✪ ꜱᴀʏᴀ ʙᴏᴛ ᴍᴀɴᴀɢᴇʀ ʙᴇʀᴛᴇᴍᴀ ᴀɴɪᴍᴇ ᴜɴᴛᴜᴋ ᴍᴇɴɢᴇʟᴏʟᴀ ɢʀᴜᴘ ᴀɴᴅᴀ ᴅᴇɴɢᴀɴ ᴍᴜᴅᴀʜ!
-    ᴅɪ ᴋᴇʟᴏʟᴀ ᴏʟᴇʜ [ꜱᴧɪᴋᴏ • 🇮🇩](https://t.me/teleudahhina)
+    ✪ ᴅɪ ᴋᴇʟᴏʟᴀ ᴏʟᴇʜ [ꜱᴧɪᴋᴏ • 🇮🇩](https://t.me/teleudahhina)
     ────────────────────────
     ✪ Uᴘᴛɪᴍᴇ: {}
     ✪ {} ᴘᴇɴɢɢᴜɴᴀ, ᴍᴇʟɪɴᴛᴀsɪ {} ᴏʙʀᴏʟᴀɴ.
@@ -807,7 +807,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                "👋 Bot udah aktif ya ngtd.",
+                "👋 Hi friends, I'm alive..",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
