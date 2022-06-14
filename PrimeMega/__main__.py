@@ -118,10 +118,10 @@ buttons = [
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
 
-PRIME_IMG = "https://telegra.ph/file/b9fa4e1360d0a872a3cd5.jpg"
+PRIME_IMG = "https://telegra.ph/file/928dafe0e365472cac933.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @Bukan_guudlooking \
+ You can support the project by contacting @teleudahhina \
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
@@ -136,7 +136,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("PrimeMega.modules." + module_name)
+    imported_module = importlib.import_module("Saiko.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -374,7 +374,7 @@ def help_button(update, context):
         pass
 
 
-def prime_about_callback(update, context):
+def saiko_about_callback(update, context):
     query = update.callback_query
     if query.data == "prime_":
         query.message.edit_text(
@@ -392,23 +392,23 @@ def prime_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins", callback_data="prime_admin"),
-                    InlineKeyboardButton(text="Notes", callback_data="prime_notes"),
+                    InlineKeyboardButton(text="Admins", callback_data="saiko_admin"),
+                    InlineKeyboardButton(text="Notes", callback_data="saiko_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", callback_data="prime_support"),
-                    InlineKeyboardButton(text="Credits", callback_data="prime_credit"),
+                    InlineKeyboardButton(text="Support", callback_data="saiko_support"),
+                    InlineKeyboardButton(text="Credits", callback_data="saiko_credit"),
                  ],
                  [
                     InlineKeyboardButton(text="Musicplayer", callback_data="source_"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="prime_back"),
+                    InlineKeyboardButton(text="Go Back", callback_data="saiko_back"),
                  ]
                 ]
             ),
         )
-    elif query.data == "prime_back":
+    elif query.data == "saiko_back":
         first_name = update.effective_user.first_name
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
@@ -423,10 +423,10 @@ def prime_about_callback(update, context):
                 disable_web_page_preview=True,
         )
 
-    elif query.data == "prime_admin":
+    elif query.data == "saiko_admin":
         query.message.edit_text(
             text=f"*๏ Let's make your group bit effective now*"
-            "\nCongragulations, Prime Mega now ready to manage your group."
+            "\nCongragulations, Saiko robot now ready to manage your group."
             "\n\n*Admin Tools*"
             "\nBasic Admin tools help you to protect and powerup your group."
             "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
@@ -436,11 +436,11 @@ def prime_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="prime_")]]
+                [[InlineKeyboardButton(text="Go Back", callback_data="saiko_")]]
             ),
         )
 
-    elif query.data == "prime_notes":
+    elif query.data == "saiko_notes":
         query.message.edit_text(
             text=f"<b>๏ Setting up notes</b>"
             f"\nYou can save message/media/audio or anything as notes"
@@ -448,13 +448,13 @@ def prime_about_callback(update, context):
             f"\n\nYou can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="prime_")]]
+                [[InlineKeyboardButton(text="Go Back", callback_data="saiko_")]]
             ),
         )
-    elif query.data == "prime_support":
+    elif query.data == "saiko_support":
         query.message.edit_text(
             text=f"*๏ {BOT_NAME} support chats*"
-            "\nJoin My Support Group/Channel for see or report a problem on PrimeMega.",
+            "\nJoin My Support Group/Channel for see or report a problem on Saiko.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
