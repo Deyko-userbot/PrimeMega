@@ -84,12 +84,16 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Hello {} !*
+✪ 👋 *Hello* {} !
+✪ ᴍʏ ɴᴀᴍᴇ ɪꜱ ꜱᴀɪᴋᴏ [🤖](https://telegra.ph/file/928dafe0e365472cac933.jpg)
+✪ ɪ'ᴍ ᴀ ᴀɴɪᴍᴇ ᴛʜᴇᴍᴇ ʙᴏᴛ ꜰᴏʀ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀꜱɪʟʏ!
+✪ ꜱᴀʏᴀ ʙᴏᴛ ʙᴇʀᴛᴇᴍᴀ ᴀɴɪᴍᴇ ᴜɴᴛᴜᴋ ᴍᴇɴɢᴇʟᴏʟᴀ ɢʀᴜᴘ ᴀɴᴅᴀ ᴅᴇɴɢᴀɴ ᴍᴜᴅᴀʜ!
+ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [ꜱᴀɪᴋᴏ • 🇮🇩](https://t.me/saikobukanbot)
 ────────────────────────
-I'm a powerful group management bot built to help you manage your group!
-────────────────────
-Hit the /help or tap on button to se available command on me.
-"""
+✪ ᴜᴘᴛɪᴍᴇ: `{}`
+✪ `{}` ᴜꜱᴇʀ, ᴀᴄʀᴏꜱꜱ `{}` ᴄʜᴀᴛꜱ.
+────────────────────────
+✪ ᴘᴏᴡᴇʀᴇᴅ ʙʏ: [ꜱᴀɪᴋᴏ](https://t.me/teleudahhina)!
 
 buttons = [
         [
