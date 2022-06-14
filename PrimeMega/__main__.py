@@ -84,16 +84,12 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-✪ 👋 *Hello* {} !
-✪ ᴍʏ ɴᴀᴍᴇ ɪꜱ ꜱᴀɪᴋᴏ [🤖](https://telegra.ph/file/928dafe0e365472cac933.jpg)
-✪ ɪ'ᴍ ᴀ ᴀɴɪᴍᴇ ᴛʜᴇᴍᴇ ʙᴏᴛ ꜰᴏʀ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀꜱɪʟʏ!
-✪ ꜱᴀʏᴀ ʙᴏᴛ ʙᴇʀᴛᴇᴍᴀ ᴀɴɪᴍᴇ ᴜɴᴛᴜᴋ ᴍᴇɴɢᴇʟᴏʟᴀ ɢʀᴜᴘ ᴀɴᴅᴀ ᴅᴇɴɢᴀɴ ᴍᴜᴅᴀʜ!
-ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [ꜱᴀɪᴋᴏ • 🇮🇩](https://t.me/saikobukanbot)
+*Hello {} !*
 ────────────────────────
-✪ ᴜᴘᴛɪᴍᴇ: `{}`
-✪ `{}` ᴜꜱᴇʀ, ᴀᴄʀᴏꜱꜱ `{}` ᴄʜᴀᴛꜱ.
-────────────────────────
-✪ ᴘᴏᴡᴇʀᴇᴅ ʙʏ: [ꜱᴀɪᴋᴏ](https://t.me/teleudahhina)!
+I'm a powerful group management bot built to help you manage your group!
+────────────────────
+Hit the /help or tap on button to se available command on me.
+"""
 
 buttons = [
         [
@@ -118,8 +114,12 @@ buttons = [
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
 
-PRIME_IMG = "https://telegra.ph/file/928dafe0e365472cac933.jpg"
+PRIME_IMG = "https://telegra.ph/file/b9fa4e1360d0a872a3cd5.jpg"
 
+DONATE_STRING = """Heya, glad to hear you want to donate!
+ You can support the project by contacting @Bukan_guudlooking \
+ Supporting isnt always financial! \
+ Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -132,7 +132,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("Saiko.modules." + module_name)
+    imported_module = importlib.import_module("PrimeMega.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -244,7 +244,7 @@ def start(update: Update, context: CallbackContext):
 
 
 def error_handler(update, context):
-    "Log the error and send a telegram message to notify the developer."
+    """Log the error and send a telegram message to notify the developer."""
     # Log the error before we do anything else, so we can see it even if something breaks.
     LOGGER.error(msg="Exception while handling an update:", exc_info=context.error)
 
@@ -370,7 +370,7 @@ def help_button(update, context):
         pass
 
 
-def saiko_about_callback(update, context):
+def prime_about_callback(update, context):
     query = update.callback_query
     if query.data == "prime_":
         query.message.edit_text(
@@ -388,23 +388,23 @@ def saiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins", callback_data="saiko_admin"),
-                    InlineKeyboardButton(text="Notes", callback_data="saiko_notes"),
+                    InlineKeyboardButton(text="Admins", callback_data="prime_admin"),
+                    InlineKeyboardButton(text="Notes", callback_data="prime_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", callback_data="saiko_support"),
-                    InlineKeyboardButton(text="Credits", callback_data="saiko_credit"),
+                    InlineKeyboardButton(text="Support", callback_data="prime_support"),
+                    InlineKeyboardButton(text="Credits", callback_data="prime_credit"),
                  ],
                  [
                     InlineKeyboardButton(text="Musicplayer", callback_data="source_"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="saiko_back"),
+                    InlineKeyboardButton(text="Go Back", callback_data="prime_back"),
                  ]
                 ]
             ),
         )
-    elif query.data == "saiko_back":
+    elif query.data == "prime_back":
         first_name = update.effective_user.first_name
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
@@ -419,10 +419,10 @@ def saiko_about_callback(update, context):
                 disable_web_page_preview=True,
         )
 
-    elif query.data == "saiko_admin":
+    elif query.data == "prime_admin":
         query.message.edit_text(
             text=f"*๏ Let's make your group bit effective now*"
-            "\nCongragulations, Saiko robot now ready to manage your group."
+            "\nCongragulations, Prime Mega now ready to manage your group."
             "\n\n*Admin Tools*"
             "\nBasic Admin tools help you to protect and powerup your group."
             "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
@@ -432,11 +432,11 @@ def saiko_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="saiko_")]]
+                [[InlineKeyboardButton(text="Go Back", callback_data="prime_")]]
             ),
         )
 
-    elif query.data == "saiko_notes":
+    elif query.data == "prime_notes":
         query.message.edit_text(
             text=f"<b>๏ Setting up notes</b>"
             f"\nYou can save message/media/audio or anything as notes"
@@ -444,13 +444,13 @@ def saiko_about_callback(update, context):
             f"\n\nYou can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="saiko_")]]
+                [[InlineKeyboardButton(text="Go Back", callback_data="prime_")]]
             ),
         )
-    elif query.data == "saiko_support":
+    elif query.data == "prime_support":
         query.message.edit_text(
             text=f"*๏ {BOT_NAME} support chats*"
-            "\nJoin My Support Group/Channel for see or report a problem on Saiko.",
+            "\nJoin My Support Group/Channel for see or report a problem on PrimeMega.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -849,6 +849,8 @@ def main():
     dispatcher.add_handler(settings_callback_handler)
     dispatcher.add_handler(migrate_handler)
     dispatcher.add_handler(donate_handler)
+
+    dispatcher.add_error_handler(error_callback)
 
     if WEBHOOK:
         LOGGER.info(f"{dispatcher.bot.first_name} started, Using webhooks.")
