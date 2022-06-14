@@ -123,7 +123,7 @@ PRIME_IMG = "https://telegra.ph/file/928dafe0e365472cac933.jpg"
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project by contacting @teleudahhina \
  Supporting isnt always financial! \
- Those who cannot provide monetary support are welcome to help us develop the bot at ."""
+ Those who cannot provide monetary support are welcome to help us develop the bot at ."
 
 IMPORTED = {}
 MIGRATEABLE = []
