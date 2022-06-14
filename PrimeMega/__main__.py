@@ -89,7 +89,7 @@ PM_START_TEXT = """
 ᴍʏ ɴᴀᴍᴇ ɪs ꜱᴀɪᴋᴏ [🤖]
 ꜱᴀʏᴀ ʙᴏᴛ ᴍᴀɴᴀɢᴇʀ ʙᴇʀᴛᴇᴍᴀ ᴀɴɪᴍᴇ ᴜɴᴛᴜᴋ ᴍᴇɴɢᴇʟᴏʟᴀ ɢʀᴜᴘ ᴀɴᴅᴀ ᴅᴇɴɢᴀɴ ᴍᴜᴅᴀʜ!
 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [ꜱᴀɪᴋᴏ • 🇮🇩](https://t.me/teleudahhina)
-"https://telegra.ph/file/928dafe0e365472cac933.jpg"
+(https://telegra.ph/file/928dafe0e365472cac933.jpg)
 ────────────────────
 Hit the /help or tap on button to se available command on me.
 """
