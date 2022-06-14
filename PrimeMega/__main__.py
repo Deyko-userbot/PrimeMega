@@ -43,6 +43,8 @@ from telegram.error import (
     BadRequest,
     ChatMigrated,
     NetworkError,
+    TelegramError,
+    TimedOut,
     Unauthorized,
 )
 from telegram.ext import (
@@ -246,7 +248,7 @@ def start(update: Update, context: CallbackContext):
 
 
 def error_handler(update, context):
-    """Log the error and send a telegram message to notify the developer."""
+    "Log the error and send a telegram message to notify the developer."
     # Log the error before we do anything else, so we can see it even if something breaks.
     LOGGER.error(msg="Exception while handling an update:", exc_info=context.error)
 
@@ -850,8 +852,7 @@ def main():
     dispatcher.add_handler(help_callback_handler)
     dispatcher.add_handler(settings_callback_handler)
     dispatcher.add_handler(migrate_handler)
-
-    dispatcher.add_error_handler(error_callback)
+    dispatcher.add_handler(donate_handler)
 
     if WEBHOOK:
         LOGGER.info(f"{dispatcher.bot.first_name} started, Using webhooks.")
