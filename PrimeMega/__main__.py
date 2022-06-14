@@ -86,9 +86,10 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 *Hello {} !*
 ────────────────────────
-ᴍʏ ɴᴀᴍᴇ ɪs ꜱᴀɪᴋᴏ [🤖](https://telegra.ph/file/928dafe0e365472cac933.jpg)
-ꜱᴀʏᴀ ʙᴏᴛ ᴛᴇᴍᴀ ᴀɴɪᴍᴇ ᴜɴᴛᴜᴋ ᴍᴇɴɢᴇʟᴏʟᴀ ɢʀᴜᴘ ᴀɴᴅᴀ ᴅᴇɴɢᴀɴ ᴍᴜᴅᴀʜ!
+ᴍʏ ɴᴀᴍᴇ ɪs ꜱᴀɪᴋᴏ [🤖]
+ꜱᴀʏᴀ ʙᴏᴛ ᴍᴀɴᴀɢᴇʀ ʙᴇʀᴛᴇᴍᴀ ᴀɴɪᴍᴇ ᴜɴᴛᴜᴋ ᴍᴇɴɢᴇʟᴏʟᴀ ɢʀᴜᴘ ᴀɴᴅᴀ ᴅᴇɴɢᴀɴ ᴍᴜᴅᴀʜ!
 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [ꜱᴀɪᴋᴏ • 🇮🇩](https://t.me/teleudahhina)
+"https://telegra.ph/file/928dafe0e365472cac933.jpg"
 ────────────────────
 Hit the /help or tap on button to se available command on me.
 """
