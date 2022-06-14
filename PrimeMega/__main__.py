@@ -86,7 +86,9 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 *Hello {} !*
 ────────────────────────
-I'm a powerful group management bot built to help you manage your group!
+ᴍʏ ɴᴀᴍᴇ ɪs ꜱᴀɪᴋᴏ [🤖](https://telegra.ph/file/928dafe0e365472cac933.jpg)
+ꜱᴀʏᴀ ʙᴏᴛ ᴛᴇᴍᴀ ᴀɴɪᴍᴇ ᴜɴᴛᴜᴋ ᴍᴇɴɢᴇʟᴏʟᴀ ɢʀᴜᴘ ᴀɴᴅᴀ ᴅᴇɴɢᴀɴ ᴍᴜᴅᴀʜ!
+ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [ꜱᴀɪᴋᴏ • 🇮🇩](https://t.me/teleudahhina)
 ────────────────────
 Hit the /help or tap on button to se available command on me.
 """
