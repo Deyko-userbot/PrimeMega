@@ -85,31 +85,31 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
  👋 *ʜᴀʟᴏ* {} !
- ✪ ɴᴀᴍᴀᴋᴜ ᴀᴅᴀʟᴀʜ ꜱᴀɪᴋᴏ [🧸](https://telegra.ph/file/928dafe0e365472cac933.jpg)
- ✪ ꜱᴀʏᴀ ʙᴏᴛ ᴍᴀɴᴀɢᴇʀ ʙᴇʀᴛᴇᴍᴀ ᴀɴɪᴍᴇ ᴜɴᴛᴜᴋ ᴍᴇɴɢᴇʟᴏʟᴀ ɢʀᴜᴘ ᴀɴᴅᴀ ᴅᴇɴɢᴀɴ ᴍᴜᴅᴀʜ!
- ✪ ᴅɪ ᴋᴇʟᴏʟᴀ ᴏʟᴇʜ [ꜱᴧɪᴋᴏ • 🇮🇩](https://t.me/teleudahhina)
- ────────────────────────
- ✪ Uᴘᴛɪᴍᴇ: {}
- ✪ {} ᴘᴇɴɢɢᴜɴᴀ, ᴍᴇʟɪɴᴛᴀsɪ {} ᴏʙʀᴏʟᴀɴ.
- ────────────────────────
- ✪ ᴅɪ ᴘᴇʀsᴇᴍʙᴀʜᴋᴀɴ ᴏʟᴇʜ: [ꜱᴀɪᴋᴏ](https://t.me/ikomanager_bot)!
+  ✪ ɴᴀᴍᴀᴋᴜ ᴀᴅᴀʟᴀʜ ꜱᴀɪᴋᴏ [🧸](https://telegra.ph/file/928dafe0e365472cac933.jpg)
+  ✪ ꜱᴀʏᴀ ʙᴏᴛ ᴍᴀɴᴀɢᴇʀ ʙᴇʀᴛᴇᴍᴀ ᴀɴɪᴍᴇ!
+  ✪ ᴅɪ ᴋᴇʟᴏʟᴀ ᴏʟᴇʜ [ꜱᴧɪᴋᴏ • 🇮🇩](https://t.me/teleudahhina)
+  ────────────────────────
+  ✪ Uᴘᴛɪᴍᴇ: {}
+  ✪ {} ᴘᴇɴɢɢᴜɴᴀ, ᴍᴇʟɪɴᴛᴀsɪ {} ᴏʙʀᴏʟᴀɴ.
+  ────────────────────────
+  ✪ ᴅɪ ᴘᴇʀsᴇᴍʙᴀʜᴋᴀɴ ᴏʟᴇʜ: [ꜱᴀɪᴋᴏ](https://t.me/ikomanager_bot)!
 """
 
 buttons = [
         [
         InlineKeyboardButton(
-            text=f"➕️ Add {BOT_NAME} to your group ➕️", url=f"t.me/{BOT_USERNAME}?startgroup=true"
+            text=f"➕️ ᴀᴅᴅ {BOT_NAME} ᴅɪ ɢʀᴜʙ ᴀɴᴅᴀ ➕️", url=f"t.me/{BOT_USERNAME}?startgroup=true"
         ),
     ],
     [
-        InlineKeyboardButton(text="Support", url=f"https://t.me/{SUPPORT_CHAT}"
+        InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"
         ),
         InlineKeyboardButton(
-            text="TryInline", switch_inline_query_current_chat=""
+            text="ᴛʀʏɪɴʟɪɴᴇ", switch_inline_query_current_chat=""
         ),
     ],
     [
-        InlineKeyboardButton(text="Help & Commands❔", callback_data="help_back"
+        InlineKeyboardButton(text="🧸ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅꜱ🧸", callback_data="help_back"
         ),
     ],
 ]
@@ -118,7 +118,7 @@ buttons = [
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
 
-PRIME_IMG = "https://telegra.ph/file/b9fa4e1360d0a872a3cd5.jpg"
+PRIME_IMG = "https://telegra.ph/file/928dafe0e365472cac933.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project by contacting @Bukan_guudlooking \
